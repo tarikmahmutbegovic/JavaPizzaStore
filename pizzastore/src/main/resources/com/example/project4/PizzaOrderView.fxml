@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="689.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.PizzaOrderController">
+   <children>
+      <ImageView fx:id="pizzaImage" fitHeight="150.0" fitWidth="200.0" layoutX="28.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="322.0" layoutY="31.0" prefHeight="42.0" prefWidth="99.0" text="Pizza Size">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sizePicker" layoutX="296.0" layoutY="81.0" onAction="#sizePriceCalc" prefWidth="150.0" />
+      <Label layoutX="28.0" layoutY="209.0" prefHeight="42.0" prefWidth="200.0" text="Additional Toppings">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="availableToppings1" layoutX="401.0" layoutY="197.0" prefHeight="42.0" prefWidth="159.0" text="Selected Toppings">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="availableToppings" editable="true" layoutX="28.0" layoutY="251.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="selectedToppings" editable="true" layoutX="381.0" layoutY="251.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="add" layoutX="270.0" layoutY="286.0" mnemonicParsing="false" onAction="#addTopping" prefHeight="25.0" prefWidth="79.0" text="Add &gt;&gt;" />
+      <Button fx:id="remove" layoutX="270.0" layoutY="366.0" mnemonicParsing="false" onAction="#removeTopping" text="&lt;&lt; Remove" />
+      <Label layoutX="60.0" layoutY="552.0" prefHeight="36.0" prefWidth="64.0" text="Price:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="price" editable="false" layoutX="124.0" layoutY="558.0" />
+      <Button fx:id="addOrder" layoutX="379.0" layoutY="558.0" mnemonicParsing="false" onAction="#addToOrder" prefHeight="36.0" prefWidth="212.0" text="Add To Order">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
